@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list padding>
+        <ion-item *ngFor="let item of carros">
+            <h1>{{ item.marca }}</h1>
+            <h2>{{ item.modelo }}</h2>
+            <h2>{{ item.ano }}</h2>
+            <h2>{{ item.cor }}</h2>
+            <h2>{{ item.combustivel }}</h2>
+        </ion-item>
+    </ion-list>
+
+</ion-content>

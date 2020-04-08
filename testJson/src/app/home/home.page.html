@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Json
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-content padding>
+    <ion-card *ngFor="let item of carros">
+      <img src="{{ item.imagem }}" />
+      <ion-card-header>
+        <ion-card-subtitle>{{ item.marca }}</ion-card-subtitle>
+        <ion-card-title>{{ item.modelo }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{ item.ano }}
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+</ion-content>

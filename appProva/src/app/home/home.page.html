@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Get Popular TV
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-list>
+
+      <a href="/genero">Get Genre List</a>
+
+      <ion-item *ngFor="let tv of popTv">
+        <ion-card>
+          <img src="https://image.tmdb.org/t/p/w500/{{tv.backdrop_path}}" />
+          <ion-card-header>
+            <ion-card-subtitle>{{ tv.first_air_date }}</ion-card-subtitle>
+            <ion-card-title>{{ tv.name }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{ tv.overview }}
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

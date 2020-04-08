@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  
+    <ion-card *ngFor="let item of livros">
+      <img src="{{ item.imagem }}" />
+      <ion-card-header>
+        <ion-card-subtitle>{{ item.titulo }}</ion-card-subtitle>
+        <ion-card-title>{{ item.subtitulo }}</ion-card-title>
+      </ion-card-header>
+      <p class="p" *ngFor="let autor of item.autores">{{ autor.nome }}</p>
+      <p class="p">{{ item.editora }}</p>
+      <p class="p">{{ item.ano }}</p>
+      <p class="p" *ngFor="let gen of item.generos">{{ gen.nome }}</p>
+      <p class="p">{{ item.paginas }}</p>
+    </ion-card>
+
+</ion-content>

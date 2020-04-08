@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalhes sobre o filme</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-list>
+      <ion-item *ngFor="let detail of idMovie">
+        <ion-card>
+          <img src="https://image.tmdb.org/t/p/w500/{{ movie.backdrop_path }}" />
+          <ion-card-header>
+            <ion-card-title>{{ detail.title }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{ detail.overview }}
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

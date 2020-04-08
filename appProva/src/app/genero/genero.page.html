@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Get Genre List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-list>
+
+      <a href="/home">Get Popular TV</a>
+
+      <ion-item *ngFor="let genero of gen">
+        <ion-card>
+          <ion-header>
+              <ion-card-title>{{ genero.id }}</ion-card-title>
+          </ion-header>
+          <ion-card-content>
+            {{ genero.name }}
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

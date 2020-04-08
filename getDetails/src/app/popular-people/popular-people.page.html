@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Get Popular People
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-item>
+  <a href="/home">Get Popular Movies</a>
+</ion-item>
+<ion-item>
+  <a href="/top-movie">Get Top Movies</a>
+</ion-item>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-list>
+      <ion-item *ngFor="let people of peopleList">
+        <ion-card>
+          <img src="https://image.tmdb.org/t/p/w500/{{ people.profile_path }}" />
+          <ion-card-header>
+            <ion-card-subtitle><b>{{ people.name }}</b></ion-card-subtitle>
+            <ion-card-title>{{ people.title }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content *ngFor="let known of people.known_for">
+            {{ known.original_title }}
+            <br><br>
+            {{ known.overview }}
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

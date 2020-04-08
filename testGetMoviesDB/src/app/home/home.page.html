@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Get Popular Movie
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-item>
+    <a href="/top-movie">Get Top Rated</a>
+</ion-item>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-list>
+      <ion-item *ngFor="let movie of moviesList">
+        <ion-card>
+          <img src="https://image.tmdb.org/t/p/w500/{{ movie.backdrop_path }}" />
+          <ion-card-header>
+            <ion-card-subtitle>{{ movie.release_date }}</ion-card-subtitle>
+            <ion-card-title>{{ movie.title }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{ movie.overview }}
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
